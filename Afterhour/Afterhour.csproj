@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC7519D3-BB82-4D8C-85BB-9369226F8C01}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Afterhour</RootNamespace>
+    <AssemblyName>Afterhour</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Code\Game\Scenes\BattleScene.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\BattleInst.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\EnemyData.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Fighter.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Fighters\EnemyFighter.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Fighters\PlayerFighter.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Move.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Moves\Attack.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Moves\Defend.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Moves\Heal.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\Moves\Status.cs" />
+    <Compile Include="Code\Game\Scenes\Battle\UI\OptionWheel.cs" />
+    <Compile Include="Code\Game\Scenes\OverworldScene.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Camera.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\Bounds.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\Enemies\Slime.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\Enemy.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\Entity.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\NPC.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\NPCs\Villager.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Entities\Player.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Map\MapCell.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Map\MapLoader.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Map\Minimap.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Map\Tile.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Map\TileMap.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Menus\ExpBar.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Menus\InventoryMenu.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\World.cs" />
+    <Compile Include="Code\Game\Scenes\Overworld\Zone.cs" />
+    <Compile Include="Code\Game\Scenes\Scene.cs" />
+    <Compile Include="Code\Handling\DataFiles\ItemData.cs" />
+    <Compile Include="Code\Handling\FileHandling\MoveLoader.cs" />
+    <Compile Include="Code\Handling\FileHandling\PlayerSaver.cs" />
+    <Compile Include="Code\Handling\GameHandler.cs" />
+    <Compile Include="Code\Handling\GFXHandling\GFXHandler.cs" />
+    <Compile Include="Code\Handling\GFXHandling\TextureMasker.cs" />
+    <Compile Include="Code\Handling\InputHandler.cs" />
+    <Compile Include="Code\Handling\AssetHandling\Resources.cs" />
+    <Compile Include="Code\Handling\StateHandler.cs" />
+    <Compile Include="Code\Handling\Window.cs" />
+    <Compile Include="Code\Menu\ContinueMenu.cs" />
+    <Compile Include="Code\Menu\GUI\CharacterPreview.cs" />
+    <Compile Include="Code\Menu\GUI\ClickBox.cs" />
+    <Compile Include="Code\Menu\GUI\ColorSlider.cs" />
+    <Compile Include="Code\Menu\GUI\ContFuncButton.cs" />
+    <Compile Include="Code\Menu\GUI\HoverBox.cs" />
+    <Compile Include="Code\Menu\GUI\ListClicker.cs" />
+    <Compile Include="Code\Menu\GUI\NextButton.cs" />
+    <Compile Include="Code\Menu\GUI\OptionBox.cs" />
+    <Compile Include="Code\Menu\GUI\OptionGrid.cs" />
+    <Compile Include="Code\Menu\GUI\TypeBox.cs" />
+    <Compile Include="Code\Menu\WorldCreator.cs" />
+    <Compile Include="Code\Handling\AssetHandling\FrameAnim.cs" />
+    <Compile Include="Code\States\GameState.cs" />
+    <Compile Include="Code\States\MenuState.cs" />
+    <Compile Include="Code\States\State.cs" />
+    <Compile Include="MainGame.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MSBuild\MonoGame\v3.0\Tools\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Sounds\Wave1.wav" />
+    <Content Include="Content\Textures\Battle\FadeScreen.png" />
+    <Content Include="Content\Textures\Battle\Fighters\0_fightSheet0.png" />
+    <Content Include="Content\Textures\Battle\Fighters\0_fightSheet1.png" />
+    <Content Include="Content\Textures\Battle\Fighters\0_fleeSheet.png" />
+    <Content Include="Content\Textures\Battle\Fighters\0_idleSheet.png" />
+    <Content Include="Content\Textures\Battle\Stage\Backgrounds\Stars.png" />
+    <Content Include="Content\Textures\Battle\Stage\Floors\Test1.png" />
+    <Content Include="Content\Textures\Icons\Architecht.png" />
+    <Content Include="Content\Textures\Icons\Empty.png" />
+    <Content Include="Content\Textures\Icons\Engineer.png" />
+    <Content Include="Content\Textures\Icons\Frame.png" />
+    <Content Include="Content\Textures\Icons\Gender\Female.png" />
+    <Content Include="Content\Textures\Icons\Gender\Male.png" />
+    <Content Include="Content\Textures\Icons\Professions\Aerodominus.png" />
+    <Content Include="Content\Textures\Icons\Professions\Alchemist.png" />
+    <Content Include="Content\Textures\Icons\Professions\Biologist.png" />
+    <Content Include="Content\Textures\Icons\Professions\Blank.png" />
+    <Content Include="Content\Textures\Icons\Professions\Chemist.png" />
+    <Content Include="Content\Textures\Icons\Professions\Elementalist.png" />
+    <Content Include="Content\Textures\Icons\Professions\Empty.png" />
+    <Content Include="Content\Textures\Icons\Professions\Hydrodominus.png" />
+    <Content Include="Content\Textures\Icons\Professions\Mage.png" />
+    <Content Include="Content\Textures\Icons\Professions\Pyrodominus.png" />
+    <Content Include="Content\Textures\Icons\Professions\Terradominus.png" />
+    <Content Include="Content\Textures\Icons\stf.txt" />
+    <Content Include="Content\Textures\Inventory\InventoryArrowAnim_Left.png" />
+    <Content Include="Content\Textures\Inventory\InventoryArrowAnim_Right.png" />
+    <Content Include="Content\Textures\Inventory\Square_Blank.png" />
+    <Content Include="Content\Textures\Inventory\Square_Item.png" />
+    <Content Include="Content\Textures\Menu\Arrow.png" />
+    <Content Include="Content\Textures\Menu\Background.png" />
+    <Content Include="Content\Textures\Menu\Background2.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\ATK.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Body\Body.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Body\Bottom.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Body\ManaGlow.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Body\Shirt.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Body\Skin.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\DEF.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\DEX.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\EVL.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Hairstyles\1.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\INT.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\LUK.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Minus.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\Plus.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\VIR.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\VIT.png" />
+    <Content Include="Content\Textures\Menu\CharacterCreation\WIS.png" />
+    <Content Include="Content\Textures\Menu\CharPrevFrame.png" />
+    <Content Include="Content\Textures\Menu\ContinueMenu\ContinueFrame.png" />
+    <Content Include="Content\Textures\Menu\ContinueMenu\FuncButton_Delete.png" />
+    <Content Include="Content\Textures\Menu\ContinueMenu\FuncButton_Play.png" />
+    <Content Include="Content\Textures\Menu\ContinueMenu\SaveBar.png" />
+    <Content Include="Content\Textures\Menu\CreationFrame.png" />
+    <Content Include="Content\Textures\Menu\Hourglass_Anim.png" />
+    <Content Include="Content\Textures\Menu\HoverBoxTextBackground.png" />
+    <Content Include="Content\Textures\Menu\MousePointer.png" />
+    <Content Include="Content\Textures\Menu\MousePointer_anim.png" />
+    <Content Include="Content\Textures\Menu\NextButtonFrame.png" />
+    <Content Include="Content\Textures\Menu\Slider_Base.png" />
+    <Content Include="Content\Textures\Menu\Slider_H.png" />
+    <Content Include="Content\Textures\Menu\Slider_Pointer.png" />
+    <Content Include="Content\Textures\Menu\Slider_S.png" />
+    <Content Include="Content\Textures\Menu\Slider_V.png" />
+    <Content Include="Content\Textures\Menu\Title.png" />
+    <Content Include="Content\Textures\Menu\TypeBoxFrame.png" />
+    <Content Include="Content\Textures\World\Debug\boundsRect.png" />
+    <Content Include="Content\Textures\World\Entities\animTest1.png" />
+    <Content Include="Content\Textures\World\Entities\Enemies\Slime.png" />
+    <Content Include="Content\Textures\World\Entities\NPCs\Villager_anim.png" />
+    <Content Include="Content\Textures\World\Entities\Player\manaPulse.png" />
+    <Content Include="Content\Textures\World\Entities\Player\testPlayer.png" />
+    <Content Include="Content\Textures\World\FX\TalkWindow.png" />
+    <Content Include="Content\Textures\World\FX\TalkWindow_anim.png" />
+    <Content Include="Content\Textures\World\Minimap\Border.png" />
+    <Content Include="Content\Textures\World\Minimap\Border_old.png" />
+    <Content Include="Content\Textures\World\Minimap\Border_outline.png" />
+    <Content Include="Content\Textures\World\Minimap\Fill.png" />
+    <Content Include="Content\Textures\World\Minimap\Icon_Player.png" />
+    <Content Include="Content\Textures\World\Minimap\Icon_Player_Small.png" />
+    <Content Include="Content\Textures\World\Minimap\MapTex.png" />
+    <Content Include="Content\Textures\World\Minimap\MaskTex.png" />
+    <Content Include="Content\Textures\World\Minimap\MaskTex_Rect.png" />
+    <Content Include="Content\Textures\World\Minimap\Outline.png" />
+    <Content Include="Content\Textures\World\Tilesets\test1.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="Content\BattleData\EnemyAnimData_Fight.dat" />
+    <None Include="Content\BattleData\EnemyAnimData_Flee.dat" />
+    <None Include="Content\BattleData\EnemyAnimData_Idle.dat" />
+    <None Include="Content\Fonts\BattleCountdownFont.spritefont" />
+    <None Include="Content\Fonts\BattleHealthFont.spritefont" />
+    <None Include="Content\Fonts\MenuFont.spritefont" />
+    <None Include="Content\Maps\Map_Overworld.ahm" />
+    <None Include="Content\Textures\Icons\Alchemist.pdn" />
+    <None Include="Content\Textures\Icons\Elementalist.pdn" />
+    <None Include="Content\Textures\Icons\Empty.pdn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Textures\Battle\Fighters\Player\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/nmmonaco/Dropbox/gamedev stuff/Afterhour/Afterhour/Afterhour/Content/Fonts/BattleCountdownFont.spritefont</SourceFile>
+  <SourceTime>2018-03-27T08:06:56-05:00</SourceTime>
+  <DestFile>C:/Users/nmmonaco/Dropbox/gamedev stuff/Afterhour/Afterhour/Afterhour/Content/bin/Windows/Fonts/BattleCountdownFont.xnb</DestFile>
+  <DestTime>2018-04-30T13:32:36.4197472-05:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2017-03-01T09:05:36-06:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2017-03-01T09:05:36-06:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

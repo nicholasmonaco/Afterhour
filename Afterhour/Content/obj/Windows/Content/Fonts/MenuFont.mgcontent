@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/nmmonaco/Dropbox/gamedev stuff/Afterhour/Afterhour/Afterhour/Content/Fonts/MenuFont.spritefont</SourceFile>
+  <SourceTime>2018-01-04T06:34:06-06:00</SourceTime>
+  <DestFile>C:/Users/nmmonaco/Dropbox/gamedev stuff/Afterhour/Afterhour/Afterhour/Content/bin/Windows/Content/Fonts/MenuFont.xnb</DestFile>
+  <DestTime>2018-05-02T08:41:16.9296105-05:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2017-11-15T06:34:16-06:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2017-11-15T06:34:16-06:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
